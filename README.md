@@ -77,3 +77,15 @@
     - ISP(Interface Segregation Principle): **CLIENTS SHOULD NOT BE FORCED TO DEPEND UPON INTERFACES THAT THEY DO NOT USE.** 클라이언트는 자신이 사용하지 않는 인터페이스의 변화에 의해 영향을 받으면 안된다. 즉 클라이언트 별로 필요한 인터페이스만 사용할 수 있게 분리할 수 있어야 한다. 예를들어 복합기가 있는데 이 복사기는 copy, fax, print의 기능을 할 수 있다고 할 때 print의 기능 변화로 인해 copy가 영향을 받으면 안된다. 이를 위해 복합기는 copy, fax, print의 각 기능마다 따로 인터페이스를 두면 해당 인터페이스만을 상속하여 각 기능이 서로 영향받지 않도록 할 수 있다. 또한 여러 기능을 하는 하나의 class(복합기 class)를 이용할 경우 class가 너무 방대해지며 이는 SRP(Single Responsibility Principle)에도 위배된다.
 
     - DIP(Dependency Inversion): **A: HIGH LEVEL MODULES SHOULD NOT DEPEND UPON LOW LEVEL MODULES. BOTH SHOULD DEPEND UPON ABSTRACTIONS. B: ABSTRACTIONS SHOULD NOT DEPEND UPON DETAILS. DETAILS SHOULD DEPEND UPON ABSTRACTIONS.** 상위레벨 모듈은 하위레벨 모듈에 의존해서는 안되고 모든 것은 abstraction에 의존해야 한다. 즉 상대적으로 변화가 적은 것에 의존해야하며 이는 추상클래스, 인터페이스 등으로 표현할 수 있다.
+
+
+### RESTful API
+- REST의 기본 원칙을 지키는 것을 RESTful 하다고 함
+- REST의 기본 원칙 6가지
+    - Uniform interface: URI를 통해 자원의 위치를 표현하고 http method를 통해 행동을 정의하는 등 같은 interface를 사용
+    - Stateless: state를 저장하지 않음으로써 구현이 단순함
+    - Cache: http 표준을 준수함으로써 caching 사용 가능
+    - Client-Server: 서버는 api를 통해 요청에 대한 처리를 하고 session 등은 client에서 관리(server와 client의 분리)
+    - Layerd System: client는 server에 직접 연결되어 있는지 중간에 다른 server가 있는지 알 지 못한다. 중간 server에서 로드밸런싱 등을 통해 성능 향상이 가능하다.
+- 가장 중요한 특성을 한마디로 표현하면 **URI를 통해 자원의 위치를 나타내고 http method를 통해 자원에 대한 행동을 표현한다.**
+
