@@ -1,3 +1,27 @@
+## 자료구조
+- 각 자료구조를 비교할 때에는 다음의 4가지 기준에 따라 비교하자
+    - search 시간복잡도
+    - insert/delete 시간복잡도
+    - memory 공간복잡도
+    - 기타 특성
+
+
+### Array vs LinkedList
+- search
+    - Array: O(n)
+    - LinkedList: O(n)
+- insert/delete
+    - Array: O(n) -> 삽입이나 삭제 후 shift 해야함
+    - LinkedList: 지울 node를 알 경우 O(1), 일반적인 경우 O(n) -> 일반적인 경우 지울 노드를 찾아야함
+- memory 공간복잡도
+    - Array: O(n)
+    - LinkedList: O(cn) -> 다음 node를 가르키는 포인터만큼 추가공간 필요
+- 기타 특성
+    - array는 random access 가능(물리적으로 연속해서 할당되므로)
+    - linked list는 random access 불가능(link를 쭉 따라가야함)
+    - array는 fixed size, linked list는 dynamic size
+    - array가 fixed size 이므로 약간의 공간비효율이 있을 수 있음(예를 들어 size 100인 array를 할당 후 element를 3개만 쓰는 경우)
+
 ### IP address
 - key word
     - 내부IP vs 외부IP, 사설IP vs 공인IP
@@ -88,4 +112,3 @@
     - Client-Server: 서버는 api를 통해 요청에 대한 처리를 하고 session 등은 client에서 관리(server와 client의 분리)
     - Layerd System: client는 server에 직접 연결되어 있는지 중간에 다른 server가 있는지 알 지 못한다. 중간 server에서 로드밸런싱 등을 통해 성능 향상이 가능하다.
 - 가장 중요한 특성을 한마디로 표현하면 **URI를 통해 자원의 위치를 나타내고 http method를 통해 자원에 대한 행동을 표현한다.**
-
