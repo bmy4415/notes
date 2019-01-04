@@ -112,3 +112,7 @@
     - Client-Server: 서버는 api를 통해 요청에 대한 처리를 하고 session 등은 client에서 관리(server와 client의 분리)
     - Layerd System: client는 server에 직접 연결되어 있는지 중간에 다른 server가 있는지 알 지 못한다. 중간 server에서 로드밸런싱 등을 통해 성능 향상이 가능하다.
 - 가장 중요한 특성을 한마디로 표현하면 **URI를 통해 자원의 위치를 나타내고 http method를 통해 자원에 대한 행동을 표현한다.**
+
+### 정규 표현식
+- meta 문자를 이용하여 문자열에 대한 pattern을 다룰 수 있게 해주는 식
+- https://www.tuwlab.com/ece/25809 참고
