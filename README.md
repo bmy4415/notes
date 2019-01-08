@@ -118,3 +118,10 @@
 - https://www.tuwlab.com/ece/25809 튜토리얼
 - http://zvon.org/comp/r/tut-Regexp.html 튜토리얼
 - https://regexper.com/ 도식화
+
+### python range vs xrange
+- http://bluese05.tistory.com/57 참고
+- range()의 return type은 list, xrange()의 return type은 xrange
+    - range()의 경우 list의 내장함수를 사용할 수 있지만 큰 범위에 대해서 memory를 크게 씀
+    - xrange()의 경우 list의 내장함수를 사용할 수 없지만 큰 범위에 대해서도 항상 일정 memory를 사용(generator와 비슷하게 동작)
+    - 결론: 단순히 for문을 돌릴 용도라면 xrange가 메모리 측면에서 효율적이다
