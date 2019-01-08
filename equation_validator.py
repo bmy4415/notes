@@ -1,5 +1,5 @@
 '''
-Check whether equation in valid in human level
+Check whether equation is valid in human level
 - exclude double consecutive operator
 '''
 
